@@ -7,13 +7,13 @@ import java.util.Iterator;
 
 
 /**
- * Crea una classe anomenada Month amb un atribut "name" (que emmagatzemarà el
+ * Crea una classe anomenada Month amb un atribut "name" (que emmagatzemarï¿½ el
  * nom del mes de l'any). Afegeix 11 objectes Month (cadascun amb el seu atribut
- * diferent) en un ArrayList, a excepció de l'objecte amb atribut "Agost".
- * Després, efectua la inserció en el lloc que correspon a aquest mes i demostra
- * que l’ArrayList manté l'ordre correcte.
+ * diferent) en un ArrayList, a excepciï¿½ de l'objecte amb atribut "Agost".
+ * Desprï¿½s, efectua la inserciï¿½ en el lloc que correspon a aquest mes i demostra
+ * que lï¿½ArrayList mantï¿½ l'ordre correcte.
  * 
- * Converteix l’ArrayList de l’exercici anterior en un HashSet i assegura’t que
+ * Converteix lï¿½ArrayList de lï¿½exercici anterior en un HashSet i asseguraï¿½t que
  * no permet duplicats.
  * 
  * Recorre la llista amb un for i amb un iterador.
@@ -42,44 +42,44 @@ public class Main {
 		Month AgostoObj = new Month("Agosto");
 		monthsArray.add(7,AgostoObj);
 		
-		// con el siguiente foreach y println, se demuestra que Agosto se ha colocado en la posición 7.
-		System.out.println("Impresión del ArrayList con foreach");
+		// con el siguiente foreach y println, se demuestra que Agosto se ha colocado en la posiciï¿½n 7.
+		System.out.println("Impresiï¿½n del ArrayList con foreach");
 		for(Month m : monthsArray) {
 			System.out.println(m.getName());
 		}
-		// conversión del ArrayList a HashSet, por medio del constructor de hashset.
+		// conversiï¿½n del ArrayList a HashSet, por medio del constructor de hashset.
 		// Se imprimen desordenados.
-		System.out.println("Impresión del HashSet con foreach");
+		System.out.println("Impresiï¿½n del HashSet con foreach");
 		HashSet<Month> monthsSet = new HashSet<Month>(monthsArray);
 		for(Month m : monthsSet) {
 			System.out.println(m.getName());
 		}
-		// comprobación de que hashset no permite duplicados
-		// no añade objeto AgostoObj a la colección al ser duplicado
-		System.out.println("tamaño de la colección monthSet: " + monthsSet.size());
+		// comprobaciï¿½n de que hashset no permite duplicados
+		// no aï¿½ade objeto AgostoObj a la colecciï¿½n al ser duplicado
+		System.out.println("tamaï¿½o de la colecciï¿½n monthSet: " + monthsSet.size());
 		monthsSet.add(AgostoObj);
-		System.out.println("tamaño de la colección monthSet añadiendo objeto duplicado: " + monthsSet.size());
-		System.out.println("Impresión del HashSet con foreach");
+		System.out.println("tamaï¿½o de la colecciï¿½n monthSet aï¿½adiendo objeto duplicado: " + monthsSet.size());
+		System.out.println("Impresiï¿½n del HashSet con foreach");
 		for(Month m : monthsSet) {
 			System.out.println(m.getName());
 		}
-		// Si añade objeto a la colección (aunque tenga el mismo valor)
-		System.out.println("tamaño de la colección monthSet: " + monthsSet.size());
-		Month InventadoObj = new Month("Agosto"); 
+		// Si aï¿½ade objeto a la colecciï¿½n en caso de no ser duplicado (para objeto String, no tener mismo valor)
+		System.out.println("tamaï¿½o de la colecciï¿½n monthSet: " + monthsSet.size());
+		Month InventadoObj = new Month("Inventado"); 
 		monthsSet.add(InventadoObj);
-		System.out.println("tamaño de la colección monthSet con objeto no duplicado inventado: " + monthsSet.size());
-		System.out.println("Impresión del HashSet con foreach");
+		System.out.println("tamaï¿½o de la colecciï¿½n monthSet con objeto no duplicado inventado: " + monthsSet.size());
+		System.out.println("Impresiï¿½n del HashSet con foreach");
 		for(Month m : monthsSet) {
 			System.out.println(m.getName());
 		}
-		// recorrer la colección con un iterador
-		System.out.println("Impresión del HashSet con iterator");
+		// recorrer la colecciï¿½n con un iterador
+		System.out.println("Impresiï¿½n del HashSet con iterator");
 		Iterator<Month> mon = monthsSet.iterator();
 		while(mon.hasNext()) {
 			System.out.println(mon.next().getName());
 		}
-		// eliminar el objeto InventadoObj e impresión con iterator
-		System.out.println("Impresión sin mes de Inventado");
+		// eliminar el objeto InventadoObj e impresiï¿½n con iterator
+		System.out.println("Impresiï¿½n sin mes de Inventado");
 		monthsSet.remove(InventadoObj);
 		mon = monthsSet.iterator();
 		while(mon.hasNext()) {

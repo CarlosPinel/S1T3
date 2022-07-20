@@ -32,7 +32,7 @@ public class Main {
 
 		List<Integer> numeros2 = new ArrayList<Integer>();
 
-		// Usar ListIterator para leer elementos de la lista 1 y añadirlos a la lista2 en orden inverso.
+		// Usar ListIterator para leer elementos de la lista 1 y aï¿½adirlos a la lista2 en orden inverso.
 		ListIterator<Integer> it = numeros1.listIterator();
 		while (it.hasNext()) {
 			it.next();
@@ -47,10 +47,11 @@ public class Main {
 		}
 
 		//Otra forma:
-
+		//orden inverso
 		List<Integer> numeros3 = new ArrayList<Integer>();
 		numeros3.addAll(numeros1);
 		Collections.sort(numeros3, Collections.reverseOrder());
+		//impresion
 		for (Integer n : numeros3) {
 			System.out.println(n);
 		}
